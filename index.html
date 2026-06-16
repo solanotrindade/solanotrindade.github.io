@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>EMEF Solano Trindade</title>
+
+    <!-- Fontes e ícones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f4f9fc;
+            color: #1e2b37;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ---------- HEADER com efeito glass ---------- */
+        header {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 20, 30, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 16px 0;
+            transition: 0.3s;
+        }
+
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: #0a3b4f;
+        }
+
+        .logo i {
+            font-size: 2.2rem;
+            color: #1a7f8c;
+        }
+
+        .logo span {
+            color: #1a7f8c;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1e2b37;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0%;
+            height: 2px;
+            background: #1a7f8c;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: #0f5b66;
+        }
+
+        .btn-matricula {
+            background: #1a7f8c;
+            color: white !important;
+            padding: 10px 22px;
+            border-radius: 40px;
+            font-weight: 600;
+            box-shadow: 0 6px 18px rgba(26, 127, 140, 0.3);
+            transition: 0.3s;
+        }
+
+        .btn-matricula::after {
+            display: none;
+        }
+
+        .btn-matricula:hover {
+            background: #0f5b66;
+            transform: scale(1.03);
+            box-shadow: 0 10px 24px rgba(26, 127, 140, 0.4);
+        }
+
+        /* ---------- HERO ---------- */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            padding: 60px 0 40px;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #0a3b4f;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 i {
+            color: #1a7f8c;
+            margin-right: 6px;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #2c4755;
+            max-width: 500px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            padding: 14px 32px;
+            border-radius: 60px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #1a7f8c;
+            color: white;
+            box-shadow: 0 6px 18px rgba(26, 127, 140, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #0f5b66;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(26, 127, 140, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #1a7f8c;
+            border: 2px solid #1a7f8c;
+        }
+
+        .btn-secondary:hover {
+            background: #1a7f8c10;
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 480px;
+            border-radius: 40px;
+            box-shadow: 0 20px 40px rgba(0, 20, 30, 0.15);
+            transition: 0.5s;
+            object-fit: cover;
+            aspect-ratio: 4/3;
+            background: #d9eaf0;
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.02) rotate(-1deg);
+        }
+
+        /* ---------- CARDS ---------- */
+        .diferenciais {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .diferenciais h2 {
+            font-size: 2.2rem;
+            color: #0a3b4f;
+            margin-bottom: 12px;
+        }
+
+        .diferenciais p.sub {
+            color: #3d5a68;
+            margin-bottom: 48px;
+            font-size: 1.1rem;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 32px;
+        }
+
+        .card {
+            background: white;
+            padding: 32px 20px;
+            border-radius: 40px;
+            box-shadow: 0 12px 30px rgba(0, 20, 30, 0.06);
+            transition: 0.4s ease;
+            border: 1px solid rgba(26, 127, 140, 0.06);
+        }
+
+        .card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 24px 48px rgba(26, 127, 140, 0.12);
+            border-color: #1a7f8c30;
+        }
+
+        .card i {
+            font-size: 3rem;
+            color: #1a7f8c;
+            margin-bottom: 16px;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: #0a3b4f;
+        }
+
+        .card p {
+            color: #3d5a68;
+        }
+
+        /* ---------- NOTÍCIAS ---------- */
+        .noticias {
+            padding: 40px 0 60px;
+        }
+
+        .noticias h2 {
+            font-size: 2rem;
+            color: #0a3b4f;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .noticias-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+        }
+
+        .noticia-item {
+            background: white;
+            border-radius: 28px;
+            padding: 24px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+            border-left: 6px solid #1a7f8c;
+            transition: 0.3s;
+        }
+
+        .noticia-item:hover {
+            transform: translateX(6px);
+            box-shadow: 0 12px 32px rgba(26, 127, 140, 0.08);
+        }
+
+        .noticia-item small {
+            color: #1a7f8c;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .noticia-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 6px;
+        }
+
+        .noticia-item p {
+            color: #3d5a68;
+        }
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            background: #0a2d39;
+            color: #d9eaf0;
+            padding: 40px 0 24px;
+            margin-top: 40px;
+            border-radius: 60px 60px 0 0;
+        }
+
+        .footer-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 32px;
+        }
+
+        .footer-flex div {
+            max-width: 280px;
+        }
+
+        .footer-flex h4 {
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            color: white;
+        }
+
+        .footer-flex p,
+        .footer-flex a {
+            color: #b6d4de;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            transition: 0.2s;
+        }
+
+        .footer-flex a:hover {
+            color: white;
+            padding-left: 4px;
+        }
+
+        .footer-social i {
+            font-size: 1.6rem;
+            margin-right: 16px;
+            color: #b6d4de;
+            transition: 0.3s;
+        }
+
+        .footer-social i:hover {
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .copy {
+            text-align: center;
+            padding-top: 32px;
+            border-top: 1px solid #1f4d5c;
+            margin-top: 32px;
+            font-size: 0.9rem;
+            color: #9bbcc8;
+        }
+
+        /* ---------- RESPONSIVO ---------- */
+        @media (max-width: 820px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 30px 0;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-image img {
+                max-width: 100%;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+            }
+            nav {
+                gap: 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .btn-matricula {
+                padding: 8px 18px;
+                font-size: 0.9rem;
+            }
+            .footer-flex {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .noticias-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ---------- JS EFEITO: partículas sutis ---------- */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Partículas (JS) -->
+    <div id="particles-js"></div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container header-flex">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                EMEF <span>Solano</span> Trindade
+            </div>
+            <nav>
+                <a href="#">Início</a>
+                <a href="#">Sobre</a>
+                <a href="#">Ensino</a>
+                <a href="#">Contato</a>
+                <a href="#" class="btn-matricula"><i class="fas fa-pen"></i> Matrícula</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="container hero">
+        <div class="hero-text">
+            <h1>
+                <i class="fas fa-star"></i> Educação que<br/>transforma vidas
+            </h1>
+            <p>
+                Na EMEF Solano Trindade, cultivamos conhecimento, respeito e
+                criatividade para formar cidadãos do futuro.
+            </p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">
+                    <i class="fas fa-rocket"></i> Conheça a escola
+                </a>
+                <a href="#" class="btn-secondary">
+                    <i class="fas fa-calendar-alt"></i> Agenda
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop&crop=center&auto=format"
+                 alt="Escola Solano Trindade" />
+        </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="container diferenciais">
+        <h2>Por que a Solano Trindade?</h2>
+        <p class="sub">Um ambiente acolhedor que inspira aprendizado todos os dias.</p>
+        <div class="card-grid">
+            <div class="card">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h3>Professores dedicados</h3>
+                <p>Equipe qualificada com paixão por ensinar e cuidar de cada aluno.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-book-open"></i>
+                <h3>Ensino inovador</h3>
+                <p>Metodologias ativas que estimulam o pensamento crítico e a criatividade.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>Inclusão e respeito</h3>
+                <p>Espaço onde todas as crianças são valorizadas e respeitadas.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-tree"></i>
+                <h3>Espaço verde</h3>
+                <p>Ambiente arborizado com áreas para lazer e aprendizado ao ar livre.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOTÍCIAS -->
+    <section class="container noticias">
+        <h2><i class="fas fa-newspaper"></i> Novidades</h2>
+        <div class="noticias-grid">
+            <div class="noticia-item">
+                <small><i class="far fa-calendar-alt"></i> 12 de junho</small>
+                <h4>Feira de Ciências 2026</h4>
+                <p>Projetos incríveis desenvolvidos pelos alunos do 4º ao 9º ano.</p>
+            </div>
+            <div class="noticia-item">
+                <small><i class="far fa-calendar-alt"></i> 05 de junho</small>
+                <h4>Dia do Meio Ambiente</h4>
+                <p>Plantio de mudas nativas e oficinas de sustentabilidade.</p>
+            </div>
+            <div class="noticia-item">
+                <small><i class="far fa-calendar-alt"></i> 28 de maio</small>
+                <h4>Mostra Cultural</h4>
+                <p>Apresentações de música, teatro e dança da nossa comunidade.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-flex">
+                <div>
+                    <h4>EMEF Solano Trindade</h4>
+                    <p><i class="fas fa-map-pin"></i> Rua das Escolas, 123 – Centro</p>
+                    <p><i class="fas fa-phone-alt"></i> (11) 99999-9999</p>
+                    <p><i class="fas fa-envelope"></i> contato@solano.educacao.br</p>
+                </div>
+                <div>
+                    <h4>Links</h4>
+                    <a href="#">Sobre a escola</a>
+                    <a href="#">Corpo docente</a>
+                    <a href="#">Projeto pedagógico</a>
+                    <a href="#">Galeria</a>
+                </div>
+                <div>
+                    <h4>Atendimento</h4>
+                    <p>Segunda a sexta, 7h30 – 17h</p>
+                    <p>Secretaria: (11) 98888-8888</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copy">
+                &copy; 2026 EMEF Solano Trindade – Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript: partículas + interações -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script>
+        // --- Efeito de partículas (fundo sutil) ---
+        tsParticles.load("particles-js", {
+            fpsLimit: 60,
+            particles: {
+                number: {
+                    value: 40,
+                    density: { enable: true, area: 800 }
+                },
+                color: { value: "#1a7f8c" },
+                opacity: {
+                    value: 0.25,
+                    random: true,
+                    animation: { enable: true, speed: 0.6, minimumValue: 0.1 }
+                },
+                size: {
+                    value: 4,
+                    random: true,
+                    animation: { enable: true, speed: 1.2, minimumValue: 1 }
+                },
+                move: {
+                    enable: true,
+                    speed: 0.6,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    outModes: "out"
+                },
+                links: {
+                    enable: true,
+                    distance: 140,
+                    color: "#1a7f8c",
+                    opacity: 0.1,
+                    width: 1
+                }
+            },
+            interactivity: {
+                events: {
+                    onHover: { enable: true, mode: "grab" },
+                },
+                modes: {
+                    grab: { distance: 180, links: { opacity: 0.3 } }
+                }
+            },
+            detectRetina: true
+        });
+
+        // --- Efeito de digitação no título (opcional) ---
+        // (Pequeno toque: se quiser, pode ativar)
+        // (Deixamos apenas como demonstração de interatividade)
+
+        // --- Scroll suave para os links internos (exemplo) ---
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // --- Alerta interativo no botão "Matrícula" ---
+        document.querySelector('.btn-matricula')?.addEventListener('click', function (e) {
+            e.preventDefault();
+            alert('📚 Matrículas abertas! Venha fazer parte da nossa escola.');
+        });
+
+        // --- Botão "Conheça a escola" mostra um aviso amigável ---
+        document.querySelector('.btn-primary')?.addEventListener('click', function (e) {
+            e.preventDefault();
+            alert('🌟 Bem-vindo à EMEF Solano Trindade! Agende uma visita.');
+        });
+
+        console.log('🚀 Página da EMEF Solano Trindade carregada com sucesso!');
+    </script>
+</body>
+</html>
