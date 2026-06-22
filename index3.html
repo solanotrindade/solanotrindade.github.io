@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Brasil</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:linear-gradient(-45deg,#009739,#FEDD00,#002776,#009739);
+    background-size:400% 400%;
+    animation:fundoAnimado 12s ease infinite;
+}
+
+@keyframes fundoAnimado{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Bandeira ao fundo */
+.bandeira{
+    position:absolute;
+    width:500px;
+    height:350px;
+    opacity:0.12;
+    animation:girar 30s linear infinite;
+}
+
+.retangulo{
+    width:100%;
+    height:100%;
+    background:#009739;
+}
+
+.losango{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:250px;
+    height:250px;
+    background:#FEDD00;
+    transform:translate(-50%,-50%) rotate(45deg);
+}
+
+.circulo{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:140px;
+    height:140px;
+    background:#002776;
+    border-radius:50%;
+    transform:translate(-50%,-50%);
+}
+
+@keyframes girar{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+
+.login-container{
+    position:relative;
+    width:380px;
+    padding:40px;
+    backdrop-filter:blur(15px);
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.3);
+    border-radius:25px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.3);
+    text-align:center;
+    animation:entrada 1s ease;
+}
+
+@keyframes entrada{
+    from{
+        opacity:0;
+        transform:translateY(-50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.logo{
+    font-size:70px;
+    margin-bottom:10px;
+    animation:pulsar 2s infinite;
+}
+
+@keyframes pulsar{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.1);
+    }
+}
+
+h1{
+    color:white;
+    margin-bottom:25px;
+    text-shadow:2px 2px 5px rgba(0,0,0,.3);
+}
+
+.input-group{
+    position:relative;
+    margin:20px 0;
+}
+
+.input-group input{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    outline:none;
+    font-size:16px;
+    background:rgba(255,255,255,.9);
+    transition:.3s;
+}
+
+.input-group input:focus{
+    transform:scale(1.03);
+    box-shadow:0 0 15px rgba(254,221,0,.8);
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    color:white;
+    background:linear-gradient(45deg,#009739,#002776);
+    transition:.4s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+.msg{
+    margin-top:15px;
+    color:white;
+    font-weight:bold;
+    min-height:20px;
+}
+
+/* Estrelas */
+.estrela{
+    position:absolute;
+    color:white;
+    font-size:12px;
+    animation:brilhar linear infinite;
+}
+
+@keyframes brilhar{
+    from{
+        opacity:0;
+        transform:translateY(0);
+    }
+    50%{
+        opacity:1;
+    }
+    to{
+        opacity:0;
+        transform:translateY(-100px);
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="bandeira">
+    <div class="retangulo"></div>
+    <div class="losango"></div>
+    <div class="circulo"></div>
+</div>
+
+<div class="login-container">
+    <div class="logo">🇧🇷</div>
+    <h1>Acesso ao Sistema</h1>
+
+    <div class="input-group">
+        <input type="text" id="usuario" placeholder="Usuário">
+    </div>
+
+    <div class="input-group">
+        <input type="password" id="senha" placeholder="Senha">
+    </div>
+
+    <button onclick="login()">Entrar</button>
+
+    <div class="msg" id="mensagem"></div>
+</div>
+
+<script>
+
+// Login de exemplo
+function login(){
+    const usuario = document.getElementById('usuario').value;
+    const senha = document.getElementById('senha').value;
+    const msg = document.getElementById('mensagem');
+
+    if(usuario === 'admin' && senha === '1234'){
+        msg.innerHTML = '✅ Login realizado com sucesso!';
+        msg.style.color = '#7CFC00';
+    }else{
+        msg.innerHTML = '❌ Usuário ou senha inválidos';
+        msg.style.color = '#ff8080';
+
+        document.querySelector('.login-container').animate([
+            {transform:'translateX(-10px)'},
+            {transform:'translateX(10px)'},
+            {transform:'translateX(-10px)'},
+            {transform:'translateX(10px)'},
+            {transform:'translateX(0)'}
+        ],{
+            duration:400
+        });
+    }
+}
+
+// Efeito de estrelas
+function criarEstrela(){
+    const estrela = document.createElement('div');
+
+    estrela.classList.add('estrela');
+    estrela.innerHTML = '✦';
+
+    estrela.style.left = Math.random()*window.innerWidth + 'px';
+    estrela.style.top = window.innerHeight + 'px';
+    estrela.style.animationDuration = (Math.random()*5+3) + 's';
+
+    document.body.appendChild(estrela);
+
+    setTimeout(()=>{
+        estrela.remove();
+    },8000);
+}
+
+setInterval(criarEstrela,250);
+
+// Enter para logar
+document.addEventListener('keydown',e=>{
+    if(e.key === 'Enter'){
+        login();
+    }
+});
+
+</script>
+
+</body>
+</html>
