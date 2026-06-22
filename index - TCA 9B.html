@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Imprensa Jovem – EMEF Solano Trindade</title>
+    <title>TCA - 9ºB EMEF Solano Trindade</title>
 
     <!-- Fontes e ícones -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
     <style>
-        /* ---------- RESET & BASE ---------- */
         * {
             margin: 0;
             padding: 0;
@@ -20,8 +19,8 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(145deg, #f7fafc 0%, #eef4f8 100%);
-            color: #1e2e3b;
+            background: linear-gradient(135deg, #f0f7fa 0%, #e6f0f5 100%);
+            color: #1a2a36;
             line-height: 1.6;
             min-height: 100vh;
         }
@@ -50,39 +49,39 @@
             left: -10%;
             width: 120%;
             height: 120%;
-            background: radial-gradient(ellipse at 30% 50%, rgba(0, 98, 120, 0.04) 0%, transparent 70%);
+            background: radial-gradient(ellipse at 30% 50%, rgba(26, 127, 140, 0.05) 0%, transparent 70%);
             border-radius: 50%;
-            animation: waveFloat 22s ease-in-out infinite alternate;
+            animation: waveFloat 20s ease-in-out infinite alternate;
         }
 
         .wave:nth-child(2) {
-            animation-delay: -6s;
-            background: radial-gradient(ellipse at 70% 40%, rgba(0, 98, 120, 0.03) 0%, transparent 70%);
+            animation-delay: -5s;
+            background: radial-gradient(ellipse at 70% 40%, rgba(26, 127, 140, 0.04) 0%, transparent 70%);
         }
 
         .wave:nth-child(3) {
-            animation-delay: -12s;
-            background: radial-gradient(ellipse at 50% 60%, rgba(0, 40, 60, 0.02) 0%, transparent 70%);
+            animation-delay: -10s;
+            background: radial-gradient(ellipse at 50% 60%, rgba(10, 59, 79, 0.03) 0%, transparent 70%);
         }
 
         @keyframes waveFloat {
             0% { transform: translate(0, 0) scale(1) rotate(0deg); }
-            33% { transform: translate(4%, -6%) scale(1.04) rotate(2deg); }
-            66% { transform: translate(-2%, 4%) scale(0.96) rotate(-2deg); }
-            100% { transform: translate(3%, -2%) scale(1.01) rotate(1deg); }
+            33% { transform: translate(5%, -8%) scale(1.05) rotate(2deg); }
+            66% { transform: translate(-3%, 5%) scale(0.95) rotate(-2deg); }
+            100% { transform: translate(4%, -3%) scale(1.02) rotate(1deg); }
         }
 
-        /* ---------- HEADER (estilo imprensa) ---------- */
+        /* ---------- HEADER ---------- */
         header {
-            background: rgba(255, 255, 255, 0.88);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-            box-shadow: 0 4px 28px rgba(0, 20, 30, 0.05);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 4px 30px rgba(0, 20, 30, 0.06);
             position: sticky;
             top: 0;
             z-index: 100;
             padding: 14px 0;
-            border-bottom: 2px solid rgba(0, 98, 120, 0.15);
+            border-bottom: 2px solid rgba(26, 127, 140, 0.15);
         }
 
         .header-flex {
@@ -96,36 +95,36 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             font-weight: 800;
-            font-size: 1.6rem;
-            color: #0a3342;
+            font-size: 1.5rem;
+            color: #0a3b4f;
         }
 
         .logo i {
             font-size: 2rem;
-            color: #00778a;
-            animation: pulseIcon 4s ease-in-out infinite;
+            color: #1a7f8c;
+            animation: pulseIcon 3s ease-in-out infinite;
         }
 
         @keyframes pulseIcon {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.08) rotate(-4deg); }
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1) rotate(-3deg); }
         }
 
         .logo span {
-            color: #00778a;
+            color: #1a7f8c;
         }
 
-        .badge-imprensa {
-            background: linear-gradient(135deg, #00778a, #005564);
+        .badge-tca {
+            background: linear-gradient(135deg, #1a7f8c, #0f5b66);
             color: white;
-            padding: 8px 20px;
+            padding: 8px 18px;
             border-radius: 40px;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             font-weight: 700;
-            letter-spacing: 0.4px;
-            box-shadow: 0 4px 14px rgba(0, 98, 120, 0.25);
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(26, 127, 140, 0.25);
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -133,7 +132,7 @@
 
         nav {
             display: flex;
-            gap: 20px;
+            gap: 24px;
             align-items: center;
             flex-wrap: wrap;
         }
@@ -155,7 +154,7 @@
             bottom: -2px;
             width: 0%;
             height: 2px;
-            background: linear-gradient(90deg, #00778a, #005564);
+            background: linear-gradient(90deg, #1a7f8c, #0f5b66);
             transition: 0.3s ease;
         }
 
@@ -164,16 +163,16 @@
         }
 
         nav a:hover {
-            color: #005564;
+            color: #0f5b66;
         }
 
         .nav-cta {
-            background: linear-gradient(135deg, #00778a, #005564);
+            background: linear-gradient(135deg, #1a7f8c, #0f5b66);
             color: white !important;
             padding: 10px 24px;
             border-radius: 40px;
             font-weight: 700;
-            box-shadow: 0 6px 18px rgba(0, 98, 120, 0.3);
+            box-shadow: 0 6px 20px rgba(26, 127, 140, 0.3);
             transition: 0.3s;
         }
 
@@ -183,95 +182,102 @@
 
         .nav-cta:hover {
             transform: translateY(-2px) scale(1.02);
-            box-shadow: 0 10px 26px rgba(0, 98, 120, 0.4);
+            box-shadow: 0 10px 28px rgba(26, 127, 140, 0.4);
         }
 
-        /* ---------- HERO IMPRENSA JOVEM ---------- */
-        .hero-imprensa {
-            padding: 50px 0 20px;
+        /* ---------- HERO TCA ---------- */
+        .hero-tca {
+            padding: 50px 0 30px;
             text-align: center;
         }
 
-        .hero-imprensa h1 {
-            font-size: 3.4rem;
+        .hero-tca h1 {
+            font-size: 3.2rem;
             font-weight: 800;
-            color: #0a3342;
-            margin-bottom: 6px;
+            color: #0a3b4f;
+            margin-bottom: 8px;
             animation: fadeInUp 0.8s ease;
         }
 
-        .hero-imprensa .subtitle {
+        .hero-tca .subtitle {
             font-size: 1.3rem;
-            color: #2a4b5a;
+            color: #2c4755;
             font-weight: 400;
+            margin-bottom: 6px;
         }
 
-        .hero-imprensa .edicao {
+        .hero-tca .tema {
             display: inline-block;
-            background: rgba(0, 98, 120, 0.08);
+            background: rgba(26, 127, 140, 0.1);
             padding: 6px 24px;
             border-radius: 40px;
-            color: #00778a;
+            color: #1a7f8c;
             font-weight: 600;
-            font-size: 1rem;
-            border: 1px solid rgba(0, 98, 120, 0.15);
-            margin-top: 8px;
+            font-size: 1.1rem;
+            border: 1px solid rgba(26, 127, 140, 0.2);
+            margin-top: 6px;
         }
 
-        .hero-imprensa .edicao i {
+        .hero-tca .tema i {
             margin-right: 8px;
         }
 
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        /* ---------- SEÇÃO DE MATÉRIAS (cards) ---------- */
+        /* ---------- SEÇÃO DE TRABALHOS ---------- */
         .section-title {
             font-size: 2rem;
             font-weight: 700;
-            color: #0a3342;
+            color: #0a3b4f;
             display: flex;
             align-items: center;
             gap: 12px;
             margin-bottom: 32px;
             padding-bottom: 12px;
-            border-bottom: 3px solid rgba(0, 98, 120, 0.15);
+            border-bottom: 3px solid rgba(26, 127, 140, 0.2);
         }
 
         .section-title i {
-            color: #00778a;
+            color: #1a7f8c;
         }
 
-        .materias-grid {
+        .trabalhos-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-bottom: 40px;
         }
 
-        .materia-card {
+        .trabalho-card {
             background: white;
             border-radius: 24px;
             padding: 28px 24px;
             box-shadow: 0 8px 30px rgba(0, 20, 30, 0.06);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid rgba(0, 98, 120, 0.06);
+            border: 1px solid rgba(26, 127, 140, 0.08);
             position: relative;
             overflow: hidden;
         }
 
-        .materia-card::before {
+        .trabalho-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #00778a, #00a0b8, #00778a);
+            background: linear-gradient(90deg, #1a7f8c, #0f5b66, #1a7f8c);
             background-size: 200% 100%;
-            animation: gradientMove 4s ease infinite;
+            animation: gradientMove 3s ease infinite;
         }
 
         @keyframes gradientMove {
@@ -279,70 +285,71 @@
             50% { background-position: 100% 50%; }
         }
 
-        .materia-card:hover {
+        .trabalho-card:hover {
             transform: translateY(-8px) scale(1.01);
-            box-shadow: 0 20px 50px rgba(0, 98, 120, 0.10);
-            border-color: rgba(0, 98, 120, 0.15);
+            box-shadow: 0 20px 50px rgba(26, 127, 140, 0.12);
+            border-color: rgba(26, 127, 140, 0.2);
         }
 
-        .materia-card .categoria {
+        .trabalho-card .numero {
             display: inline-block;
-            background: linear-gradient(135deg, #00778a, #005564);
+            background: linear-gradient(135deg, #1a7f8c, #0f5b66);
             color: white;
-            padding: 4px 16px;
-            border-radius: 30px;
-            font-size: 0.7rem;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 36px;
             font-weight: 700;
-            letter-spacing: 0.4px;
-            text-transform: uppercase;
+            font-size: 0.9rem;
             margin-bottom: 12px;
         }
 
-        .materia-card h3 {
+        .trabalho-card h3 {
             font-size: 1.25rem;
-            color: #0a3342;
+            color: #0a3b4f;
             margin-bottom: 6px;
         }
 
-        .materia-card .autor {
-            color: #00778a;
+        .trabalho-card .autor {
+            color: #1a7f8c;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             margin-bottom: 10px;
         }
 
-        .materia-card .autor i {
+        .trabalho-card .autor i {
             margin-right: 6px;
         }
 
-        .materia-card p {
-            color: #3a5a68;
+        .trabalho-card p {
+            color: #3d5a68;
             font-size: 0.95rem;
             margin-bottom: 14px;
         }
 
-        .materia-card .tags {
+        .trabalho-card .tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
         }
 
-        .materia-card .tags span {
-            background: rgba(0, 98, 120, 0.07);
-            color: #00778a;
+        .trabalho-card .tags span {
+            background: rgba(26, 127, 140, 0.08);
+            color: #1a7f8c;
             padding: 3px 14px;
             border-radius: 20px;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             font-weight: 600;
-            border: 1px solid rgba(0, 98, 120, 0.08);
+            border: 1px solid rgba(26, 127, 140, 0.1);
         }
 
-        .btn-ler-materia {
+        .btn-ver-trabalho {
             display: inline-flex;
             align-items: center;
             gap: 8px;
             margin-top: 16px;
-            color: #00778a;
+            color: #1a7f8c;
             font-weight: 600;
             text-decoration: none;
             transition: 0.3s;
@@ -353,72 +360,72 @@
             padding: 0;
         }
 
-        .btn-ler-materia:hover {
-            color: #005564;
+        .btn-ver-trabalho:hover {
+            color: #0f5b66;
             gap: 14px;
         }
 
-        /* ---------- SOBRE A IMPRENSA JOVEM ---------- */
-        .sobre-imprensa {
-            background: linear-gradient(135deg, rgba(0, 98, 120, 0.04), rgba(0, 85, 100, 0.04));
+        /* ---------- SOBRE O TCA ---------- */
+        .sobre-tca {
+            background: linear-gradient(135deg, rgba(26, 127, 140, 0.05), rgba(15, 91, 102, 0.05));
             border-radius: 32px;
             padding: 40px;
             margin: 30px 0 40px;
-            border: 1px solid rgba(0, 98, 120, 0.08);
+            border: 1px solid rgba(26, 127, 140, 0.1);
         }
 
-        .sobre-imprensa h2 {
-            color: #0a3342;
+        .sobre-tca h2 {
+            color: #0a3b4f;
             font-size: 1.8rem;
             margin-bottom: 16px;
         }
 
-        .sobre-imprensa p {
-            color: #2a4b5a;
+        .sobre-tca p {
+            color: #2c4755;
             font-size: 1.05rem;
             max-width: 700px;
         }
 
-        .sobre-imprensa .info-grid {
+        .sobre-tca .info-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 20px;
             margin-top: 24px;
         }
 
-        .sobre-imprensa .info-item {
+        .sobre-tca .info-item {
             background: white;
             padding: 16px 20px;
             border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
             text-align: center;
-            border: 1px solid rgba(0, 98, 120, 0.05);
+            border: 1px solid rgba(26, 127, 140, 0.06);
             transition: 0.3s;
         }
 
-        .sobre-imprensa .info-item:hover {
+        .sobre-tca .info-item:hover {
             transform: scale(1.03);
-            border-color: rgba(0, 98, 120, 0.12);
+            border-color: rgba(26, 127, 140, 0.15);
         }
 
-        .sobre-imprensa .info-item i {
+        .sobre-tca .info-item i {
             font-size: 2rem;
-            color: #00778a;
+            color: #1a7f8c;
             margin-bottom: 6px;
         }
 
-        .sobre-imprensa .info-item strong {
+        .sobre-tca .info-item strong {
             display: block;
-            color: #0a3342;
+            color: #0a3b4f;
             font-size: 1.1rem;
         }
 
-        .sobre-imprensa .info-item span {
-            color: #3a5a68;
-            font-size: 0.85rem;
+        .sobre-tca .info-item span {
+            color: #3d5a68;
+            font-size: 0.9rem;
         }
 
-        /* ---------- CONTADOR (imprensa) ---------- */
+        /* ---------- CONTADOR INTERATIVO (JS) ---------- */
         .counter-section {
             text-align: center;
             padding: 20px 0 30px;
@@ -426,7 +433,7 @@
 
         .counter-section h3 {
             font-size: 1.5rem;
-            color: #0a3342;
+            color: #0a3b4f;
             margin-bottom: 20px;
         }
 
@@ -438,7 +445,7 @@
             padding: 20px 40px;
             border-radius: 60px;
             box-shadow: 0 8px 30px rgba(0, 20, 30, 0.06);
-            border: 1px solid rgba(0, 98, 120, 0.08);
+            border: 1px solid rgba(26, 127, 140, 0.1);
         }
 
         .counter-item {
@@ -448,27 +455,27 @@
         .counter-item .number {
             font-size: 2.5rem;
             font-weight: 800;
-            color: #00778a;
+            color: #1a7f8c;
             display: block;
             line-height: 1;
         }
 
         .counter-item .label {
             font-size: 0.85rem;
-            color: #3a5a68;
+            color: #3d5a68;
             font-weight: 500;
         }
 
         .counter-divider {
             width: 2px;
             height: 50px;
-            background: rgba(0, 98, 120, 0.12);
+            background: rgba(26, 127, 140, 0.15);
         }
 
         /* ---------- FOOTER ---------- */
         footer {
-            background: linear-gradient(135deg, #082c38, #0a3342);
-            color: #d4e9ef;
+            background: linear-gradient(135deg, #0a2d39, #0a3b4f);
+            color: #d9eaf0;
             padding: 40px 0 24px;
             margin-top: 40px;
             border-radius: 40px 40px 0 0;
@@ -526,7 +533,7 @@
         }
 
         .footer-social a:hover {
-            background: rgba(0, 119, 138, 0.3);
+            background: rgba(26, 127, 140, 0.3);
             color: white;
             transform: translateY(-3px);
         }
@@ -534,7 +541,7 @@
         .copy {
             text-align: center;
             padding-top: 28px;
-            border-top: 1px solid #1e4d5c;
+            border-top: 1px solid #1f4d5c;
             margin-top: 28px;
             font-size: 0.85rem;
             color: #9bbcc8;
@@ -552,7 +559,7 @@
                 justify-content: center;
             }
 
-            .hero-imprensa h1 {
+            .hero-tca h1 {
                 font-size: 2.4rem;
             }
 
@@ -567,7 +574,7 @@
                 height: 2px;
             }
 
-            .sobre-imprensa {
+            .sobre-tca {
                 padding: 24px;
             }
 
@@ -583,25 +590,25 @@
         }
 
         @media (max-width: 480px) {
-            .hero-imprensa h1 {
+            .hero-tca h1 {
                 font-size: 1.8rem;
             }
 
-            .materias-grid {
+            .trabalhos-grid {
                 grid-template-columns: 1fr;
             }
 
-            .sobre-imprensa .info-grid {
+            .sobre-tca .info-grid {
                 grid-template-columns: 1fr;
             }
 
-            .badge-imprensa {
-                font-size: 0.7rem;
+            .badge-tca {
+                font-size: 0.75rem;
                 padding: 6px 14px;
             }
         }
 
-        /* ---------- FADE-IN (JS) ---------- */
+        /* ---------- EFEITO DE SCROLL (JS) ---------- */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
@@ -627,15 +634,15 @@
     <header>
         <div class="container header-flex">
             <div class="logo">
-                <i class="fas fa-newspaper"></i>
-                <span>Imprensa</span> Jovem
+                <i class="fas fa-graduation-cap"></i>
+                <span>TCA</span> 9ºB
             </div>
             <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
-                <span class="badge-imprensa">
-                    <i class="fas fa-microphone-alt"></i> EMEF Solano Trindade
+                <span class="badge-tca">
+                    <i class="fas fa-star"></i> Trabalho de Conclusão Autoral
                 </span>
                 <nav>
-                    <a href="#materias">Matérias</a>
+                    <a href="#trabalhos">Trabalhos</a>
                     <a href="#sobre">Sobre</a>
                     <a href="#contato">Contato</a>
                     <a href="#" class="nav-cta" id="btnExplorar">
@@ -647,27 +654,27 @@
     </header>
 
     <!-- HERO -->
-    <section class="container hero-imprensa">
-        <h1>📰 Imprensa Jovem</h1>
-        <p class="subtitle">EMEF Solano Trindade – 9ºB</p>
-        <div class="edicao">
-            <i class="fas fa-calendar-alt"></i> Edição Especial – TCA 2026
+    <section class="container hero-tca">
+        <h1>🌟 TCA 9ºB</h1>
+        <p class="subtitle">EMEF Solano Trindade</p>
+        <div class="tema">
+            <i class="fas fa-lightbulb"></i> Tema: "Educação e Transformação Social"
         </div>
     </section>
 
-    <!-- SOBRE A IMPRENSA JOVEM -->
-    <section class="container sobre-imprensa" id="sobre">
-        <h2><i class="fas fa-info-circle"></i> Sobre a Imprensa Jovem</h2>
+    <!-- SOBRE O TCA -->
+    <section class="container sobre-tca" id="sobre">
+        <h2><i class="fas fa-info-circle"></i> Sobre o TCA</h2>
         <p>
-            A Imprensa Jovem da EMEF Solano Trindade é um espaço de expressão, informação e criatividade.
-            Nesta edição especial, os alunos do 9ºB apresentam seus Trabalhos de Conclusão Autoral (TCA)
-            em formato de reportagens, entrevistas e artigos de opinião. Aqui, a educação e a transformação
-            social ganham voz.
+            O Trabalho de Conclusão Autoral (TCA) é um projeto desenvolvido pelos alunos do 9º ano,
+            que tem como objetivo estimular a pesquisa, a criatividade e a autonomia dos estudantes.
+            Cada aluno escolhe um tema relacionado à educação e transformação social para desenvolver
+            seu trabalho autoral.
         </p>
         <div class="info-grid">
             <div class="info-item">
                 <i class="fas fa-users"></i>
-                <strong>32 repórteres</strong>
+                <strong>32 alunos</strong>
                 <span>Turma 9ºB</span>
             </div>
             <div class="info-item">
@@ -676,117 +683,117 @@
                 <span>Ano letivo</span>
             </div>
             <div class="info-item">
-                <i class="fas fa-pen-fancy"></i>
-                <strong>16 reportagens</strong>
-                <span>Temas diversos</span>
+                <i class="fas fa-book"></i>
+                <strong>16 temas</strong>
+                <span>Diferentes áreas</span>
             </div>
             <div class="info-item">
-                <i class="fas fa-award"></i>
-                <strong>Lançamento</strong>
+                <i class="fas fa-trophy"></i>
+                <strong>Apresentação</strong>
                 <span>Novembro/2026</span>
             </div>
         </div>
     </section>
 
-    <!-- MATÉRIAS -->
-    <section class="container" id="materias">
+    <!-- TRABALHOS -->
+    <section class="container" id="trabalhos">
         <h2 class="section-title">
-            <i class="fas fa-pencil-alt"></i> Reportagens da Edição
+            <i class="fas fa-pencil-alt"></i> Trabalhos dos Alunos
         </h2>
-        <div class="materias-grid">
+        <div class="trabalhos-grid">
             <!-- Card 1 -->
-            <div class="materia-card fade-in">
-                <div class="categoria">📌 Educação</div>
-                <h3>Educação Inclusiva: um direito de todos</h3>
+            <div class="trabalho-card fade-in">
+                <div class="numero">01</div>
+                <h3>Educação Inclusiva nas Escolas</h3>
                 <div class="autor"><i class="fas fa-user"></i> Ana Clara Souza</div>
-                <p>Como as escolas podem se tornar mais acolhedoras para alunos com necessidades especiais? A repórter investiga.</p>
+                <p>Uma pesquisa sobre como as escolas podem se tornar mais inclusivas para alunos com necessidades especiais.</p>
                 <div class="tags">
                     <span>Inclusão</span>
                     <span>Educação</span>
                     <span>Sociologia</span>
                 </div>
-                <button class="btn-ler-materia" data-materia="Educação Inclusiva">
-                    Ler matéria <i class="fas fa-arrow-right"></i>
+                <button class="btn-ver-trabalho" data-trabalho="Educação Inclusiva">
+                    Ver mais <i class="fas fa-arrow-right"></i>
                 </button>
             </div>
 
             <!-- Card 2 -->
-            <div class="materia-card fade-in">
-                <div class="categoria">💻 Tecnologia</div>
-                <h3>O impacto da tecnologia na sala de aula</h3>
+            <div class="trabalho-card fade-in">
+                <div class="numero">02</div>
+                <h3>O Impacto da Tecnologia na Educação</h3>
                 <div class="autor"><i class="fas fa-user"></i> Bruno Oliveira</div>
-                <p>Será que os tablets e smartphones ajudam ou atrapalham? Uma análise sobre o uso de ferramentas digitais.</p>
+                <p>Análise do uso de ferramentas digitais no aprendizado e seus efeitos no desempenho dos alunos.</p>
                 <div class="tags">
                     <span>Tecnologia</span>
                     <span>Inovação</span>
                     <span>Educação</span>
                 </div>
-                <button class="btn-ler-materia" data-materia="Tecnologia na Educação">
-                    Ler matéria <i class="fas fa-arrow-right"></i>
+                <button class="btn-ver-trabalho" data-trabalho="Tecnologia na Educação">
+                    Ver mais <i class="fas fa-arrow-right"></i>
                 </button>
             </div>
 
             <!-- Card 3 -->
-            <div class="materia-card fade-in">
-                <div class="categoria">🌿 Meio Ambiente</div>
-                <h3>Consciência ecológica: ação na comunidade</h3>
+            <div class="trabalho-card fade-in">
+                <div class="numero">03</div>
+                <h3>Meio Ambiente e Consciência Ecológica</h3>
                 <div class="autor"><i class="fas fa-user"></i> Carla Mendes</div>
-                <p>Projeto de conscientização ambiental com ações práticas que envolvem toda a escola.</p>
+                <p>Projeto de conscientização ambiental com ações práticas para a comunidade escolar.</p>
                 <div class="tags">
                     <span>Meio Ambiente</span>
                     <span>Sustentabilidade</span>
                     <span>Cidadania</span>
                 </div>
-                <button class="btn-ler-materia" data-materia="Meio Ambiente">
-                    Ler matéria <i class="fas fa-arrow-right"></i>
+                <button class="btn-ver-trabalho" data-trabalho="Meio Ambiente">
+                    Ver mais <i class="fas fa-arrow-right"></i>
                 </button>
             </div>
 
             <!-- Card 4 -->
-            <div class="materia-card fade-in">
-                <div class="categoria">📚 Cultura</div>
-                <h3>Literatura e identidade cultural</h3>
+            <div class="trabalho-card fade-in">
+                <div class="numero">04</div>
+                <h3>Literatura e Identidade Cultural</h3>
                 <div class="autor"><i class="fas fa-user"></i> Daniela Ferreira</div>
-                <p>Como a literatura brasileira ajuda a construir a identidade dos jovens? Uma viagem pelas palavras.</p>
+                <p>Como a literatura brasileira contribui para a formação da identidade cultural dos jovens.</p>
                 <div class="tags">
                     <span>Literatura</span>
                     <span>Cultura</span>
                     <span>Identidade</span>
                 </div>
-                <button class="btn-ler-materia" data-materia="Literatura e Identidade">
-                    Ler matéria <i class="fas fa-arrow-right"></i>
+                <button class="btn-ver-trabalho" data-trabalho="Literatura e Identidade">
+                    Ver mais <i class="fas fa-arrow-right"></i>
                 </button>
             </div>
 
             <!-- Card 5 -->
-            <div class="materia-card fade-in">
-                <div class="categoria">🧠 Saúde</div>
-                <h3>Saúde mental na adolescência</h3>
+            <div class="trabalho-card fade-in">
+                <div class="numero">05</div>
+                <h3>Saúde Mental na Adolescência</h3>
                 <div class="autor"><i class="fas fa-user"></i> Eduardo Santos</div>
-                <p>Desafios, sinais de alerta e estratégias de apoio para cuidar da mente dos jovens.</p>
+                <p>Estudo sobre os desafios da saúde mental entre adolescentes e estratégias de apoio.</p>
                 <div class="tags">
                     <span>Saúde</span>
                     <span>Psicologia</span>
                     <span>Adolescência</span>
                 </div>
-                <button class="btn-ler-materia" data-materia="Saúde Mental">
-                    Ler matéria <i class="fas fa-arrow-right"></i>
+                <button class="btn-ver-trabalho" data-trabalho="Saúde Mental">
+                    Ver mais <i class="fas fa-arrow-right"></i>
                 </button>
             </div>
 
             <!-- Card 6 -->
-            <div class="materia-card fade-in">
-                <div class="categoria">🚀 Empreendedorismo</div>
-                <h3>Jovens empreendedores: o futuro começa agora</h3>
+            <div class="trabalho-card fade-in">
+                <div class="numero">06</div>
+                <h3>Empreendedorismo Jovem</h3>
                 <div class="autor"><i class="fas fa-user"></i> Fernanda Lima</div>
-                <p>Como desenvolver habilidades empreendedoras desde cedo e transformar ideias em ações.</p>
+                <p>Como incentivar o empreendedorismo entre os jovens e desenvolver habilidades para o futuro.</p>
                 <div class="tags">
                     <span>Empreendedorismo</span>
                     <span>Inovação</span>
                     <span>Futuro</span>
                 </div>
-                <button class="btn-ler-materia" data-materia="Empreendedorismo Jovem">
-                    Ler matéria <i class="fas fa-arrow-right"></i>
+                <button class="btn-ver-trabalho" data-trabalho="Empreendedorismo Jovem">
+                    Ver mais <i class="fas fa-arrow-right"></i>
                 </button>
             </div>
         </div>
@@ -794,21 +801,21 @@
 
     <!-- CONTADOR INTERATIVO -->
     <section class="container counter-section">
-        <h3><i class="fas fa-chart-line"></i> Nossa equipe em números</h3>
+        <h3><i class="fas fa-chart-line"></i> Nossos números</h3>
         <div class="counter-box">
             <div class="counter-item">
-                <span class="number" id="countReporteres">0</span>
-                <span class="label">Repórteres</span>
+                <span class="number" id="countAlunos">0</span>
+                <span class="label">Alunos</span>
             </div>
             <div class="counter-divider"></div>
             <div class="counter-item">
-                <span class="number" id="countMaterias">0</span>
-                <span class="label">Matérias</span>
+                <span class="number" id="countTrabalhos">0</span>
+                <span class="label">Trabalhos</span>
             </div>
             <div class="counter-divider"></div>
             <div class="counter-item">
-                <span class="number" id="countCategorias">0</span>
-                <span class="label">Categorias</span>
+                <span class="number" id="countTemas">0</span>
+                <span class="label">Temas</span>
             </div>
         </div>
     </section>
@@ -818,17 +825,17 @@
         <div class="container">
             <div class="footer-flex">
                 <div>
-                    <h4>📰 Imprensa Jovem</h4>
+                    <h4>📚 TCA 9ºB</h4>
                     <p>EMEF Solano Trindade</p>
                     <p>Rua das Escolas, 123 – Centro</p>
                     <p><i class="fas fa-phone-alt"></i> (11) 99999-9999</p>
                 </div>
                 <div>
                     <h4>Links</h4>
-                    <a href="#materias">Todas as matérias</a>
-                    <a href="#sobre">Sobre a Imprensa</a>
-                    <a href="#">Edições anteriores</a>
-                    <a href="#">Equipe</a>
+                    <a href="#trabalhos">Todos os trabalhos</a>
+                    <a href="#sobre">Sobre o TCA</a>
+                    <a href="#">Cronograma</a>
+                    <a href="#">Orientadores</a>
                 </div>
                 <div>
                     <h4>Redes Sociais</h4>
@@ -838,12 +845,12 @@
                         <a href="#"><i class="fab fa-github"></i></a>
                     </div>
                     <p style="margin-top: 12px; font-size: 0.85rem;">
-                        <i class="fas fa-envelope"></i> imprensajovem@solano.educacao.br
+                        <i class="fas fa-envelope"></i> tca9b@solano.educacao.br
                     </p>
                 </div>
             </div>
             <div class="copy">
-                &copy; 2026 Imprensa Jovem – EMEF Solano Trindade. Todos os direitos reservados.
+                &copy; 2026 TCA 9ºB - EMEF Solano Trindade. Todos os direitos reservados.
             </div>
         </div>
     </footer>
@@ -851,7 +858,7 @@
     <!-- JavaScript -->
     <script>
         // ============================================
-        // 1. FADE-IN AO SCROLL
+        // 1. EFEITO DE FADE-IN AO SCROLL
         // ============================================
         const fadeElements = document.querySelectorAll('.fade-in');
 
@@ -885,12 +892,13 @@
             }, 25);
         }
 
+        // Dispara quando o contador entrar na tela
         const counterObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    animateCounter('countReporteres', 32);
-                    animateCounter('countMaterias', 16);
-                    animateCounter('countCategorias', 12);
+                    animateCounter('countAlunos', 32);
+                    animateCounter('countTrabalhos', 16);
+                    animateCounter('countTemas', 12);
                     counterObserver.disconnect();
                 }
             });
@@ -902,27 +910,28 @@
         }
 
         // ============================================
-        // 3. BOTÃO "LER MATÉRIA"
+        // 3. BOTÃO "VER MAIS" - ALERTA INTERATIVO
         // ============================================
-        document.querySelectorAll('.btn-ler-materia').forEach(btn => {
+        document.querySelectorAll('.btn-ver-trabalho').forEach(btn => {
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
-                const titulo = this.getAttribute('data-materia') || 'matéria';
-                alert(`📄 Você está lendo: "${titulo}"\n\nEsta é uma reportagem da Imprensa Jovem da EMEF Solano Trindade.`);
+                const titulo = this.getAttribute('data-trabalho') || 'trabalho';
+                alert(`📄 Você está visualizando o trabalho: "${titulo}"\n\nEste é um resumo do TCA desenvolvido por um aluno do 9ºB.`);
             });
         });
 
         // ============================================
-        // 4. BOTÃO "EXPLORAR"
+        // 4. BOTÃO "EXPLORAR" - INTERAÇÃO
         // ============================================
         document.getElementById('btnExplorar')?.addEventListener('click', function(e) {
             e.preventDefault();
-            const materiasSection = document.getElementById('materias');
-            if (materiasSection) {
-                materiasSection.scrollIntoView({ behavior: 'smooth' });
-                document.querySelectorAll('.materia-card').forEach((card, index) => {
+            const trabalhosSection = document.getElementById('trabalhos');
+            if (trabalhosSection) {
+                trabalhosSection.scrollIntoView({ behavior: 'smooth' });
+                // Destaca os cards com um efeito
+                document.querySelectorAll('.trabalho-card').forEach((card, index) => {
                     setTimeout(() => {
-                        card.style.boxShadow = '0 0 0 3px rgba(0, 119, 138, 0.25)';
+                        card.style.boxShadow = '0 0 0 3px rgba(26, 127, 140, 0.3)';
                         setTimeout(() => {
                             card.style.boxShadow = '';
                         }, 800);
@@ -932,23 +941,25 @@
         });
 
         // ============================================
-        // 5. PARALLAX SUTIL NO TÍTULO
+        // 5. EFEITO DE PARALLAX SUTIL NO TÍTULO
         // ============================================
         document.addEventListener('scroll', () => {
-            const hero = document.querySelector('.hero-imprensa h1');
+            const hero = document.querySelector('.hero-tca h1');
             if (hero) {
                 const scrolled = window.pageYOffset;
-                hero.style.transform = `translateY(${scrolled * 0.04}px)`;
-                hero.style.opacity = 1 - (scrolled / 900);
+                hero.style.transform = `translateY(${scrolled * 0.05}px)`;
+                hero.style.opacity = 1 - (scrolled / 800);
             }
         });
 
         // ============================================
-        // 6. EFEITO DE CLICK NOS CARDS
+        // 6. CLICK NOS CARDS - EFEITO DE DESTAQUE
         // ============================================
-        document.querySelectorAll('.materia-card').forEach(card => {
+        document.querySelectorAll('.trabalho-card').forEach(card => {
             card.addEventListener('click', function(e) {
-                if (e.target.closest('.btn-ler-materia')) return;
+                // Evita conflito com o botão "Ver mais"
+                if (e.target.closest('.btn-ver-trabalho')) return;
+
                 this.style.transform = 'scale(0.98)';
                 setTimeout(() => {
                     this.style.transform = '';
@@ -956,8 +967,8 @@
             });
         });
 
-        console.log('📰 Imprensa Jovem – EMEF Solano Trindade carregada!');
-        console.log('📚 Edição especial TCA 2026 – 6 reportagens disponíveis.');
+        console.log('🚀 TCA 9ºB - Página carregada com sucesso!');
+        console.log('📚 Trabalhos disponíveis: 6');
     </script>
 </body>
 </html>
